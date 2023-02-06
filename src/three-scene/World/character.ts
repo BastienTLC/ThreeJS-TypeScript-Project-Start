@@ -23,11 +23,15 @@ export class Character {
         this.scene.add(this.focusCharacter);
     }
 
+    setAnimation(){
+        this.focusCharacter.rotation.y += 0.01;
+    }
 
 
     resize(){
     }
 
     update(){
+       this.setAnimation();
     }
 }
