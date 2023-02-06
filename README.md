@@ -12,22 +12,28 @@ This GitHub repository is a starter template for creating a ThreeJS project usin
 
 ## Project Structure
 
-three-scene/
-  Utils/
-    assets.ts
-    Resources.ts
-    Sizes.ts
-    Time.ts
-  World/
-    character.ts
-    Environment.ts
-    Floor.ts
-    World.ts
-  Camera.ts
-  Experience.ts
-  Renderer.ts
-  main.ts
-
+```lua
+Three-Scene
+|
++-- Utils
+|   |
+|   +-- assets.ts
+|   +-- Resources.ts
+|   +-- Sizes.ts
+|   \-- Time.ts
+|
++-- World
+|   |
+|   +-- character.ts
+|   +-- Environment.ts
+|   +-- Floor.ts
+|   \-- World.ts
+|
++-- Camera.ts
++-- Experience.ts
++-- Renderer.ts
+\-- main.ts
+ ```
 
 ## Usage
 
