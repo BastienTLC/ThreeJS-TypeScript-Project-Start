@@ -1,23 +1,15 @@
 {
   "name": "threejs-typescript-project-start",
-  "version": "1.0.0",
-  "description": "This GitHub repository is a starter template for creating a ThreeJS project using TypeScript. Simply clone the repo to quickly get started on building interactive 3D graphics with ThreeJS and TypeScript. The repository contains all necessary dependencies and configurations, allowing you to focus on coding and building your project with ease.",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BastienTLC/ThreeJS-TypeScript-Project-Start.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BastienTLC/ThreeJS-TypeScript-Project-Start/issues"
-  },
-  "homepage": "https://github.com/BastienTLC/ThreeJS-TypeScript-Project-Start#readme",
   "devDependencies": {
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
   }
 }
