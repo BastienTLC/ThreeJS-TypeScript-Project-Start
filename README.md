@@ -12,21 +12,22 @@ This GitHub repository is a starter template for creating a ThreeJS project usin
 
 ## Project Structure
 
-three-scene
-Utils
-assets.ts
-resources.ts
-sizes.ts
-time.ts
-World
-character.ts
-environment.ts
-floor.ts
-world.ts
-camera.ts
-experience.ts
-renderer.ts
-main.ts
+three-scene/
+  Utils/
+    assets.ts
+    Resources.ts
+    Sizes.ts
+    Time.ts
+  World/
+    character.ts
+    Environment.ts
+    Floor.ts
+    World.ts
+  Camera.ts
+  Experience.ts
+  Renderer.ts
+  main.ts
+
 
 ## Usage
 
@@ -34,11 +35,11 @@ main.ts
 git clone [repos](https://github.com/BastienTLC/ThreeJS-TypeScript-Project-Start)
 
 2. Navigate to the project directory
-cd ThreeJS-TypeScript-Project-Start
+`cd ThreeJS-TypeScript-Project-Start`
 3. Install the dependencies
-npm install
+`npm install`
 4. Start a development server
-npm run dev
+`npm run dev`
 
 
 
