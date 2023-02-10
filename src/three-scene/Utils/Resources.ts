@@ -36,9 +36,9 @@ export class Resources extends EventEmitter{
     setLoarders(){
         this.loarders = {};
         this.loarders.gltfLoader = new GLTFLoader();
-        this.loarders.dracoLoader = new DRACOLoader();
+        /*this.loarders.dracoLoader = new DRACOLoader();
         this.loarders.dracoLoader.setDecoderPath("../../assets/draco/");
-        this.loarders.gltfLoader.setDRACOLoader(this.loarders.dracoLoader);
+        this.loarders.gltfLoader.setDRACOLoader(this.loarders.dracoLoader);*/
 
     }
     startLoading(){
@@ -68,6 +68,9 @@ export class Resources extends EventEmitter{
                 this.videoTexture[asset.name].generateMipmaps = false;
                 this.videoTexture[asset.name].encoding = THREE.sRGBEncoding
             }
+            else if(asset.type === "texture"){
+                this.loadImage(asset);
+            }
         }
     }
 
@@ -77,5 +80,11 @@ export class Resources extends EventEmitter{
         if (this.loaded === this.queue){
             this.emit("ready");
         }
+    }
+    loadImage(asset: any){
+        this.items[asset.name] = asset.path;
+        this.loaded++;
+        if (this.loaded === this.queue)
+            this.emit("ready");
     }
 }

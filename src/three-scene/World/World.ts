@@ -8,6 +8,8 @@ import assets from "../Utils/assets";
 import {Resources} from "../Utils/Resources";
 import {Character} from "./character";
 import {Environment} from "./Environment";
+import {Controls} from "./Controls";
+import { House } from './House';
 
 export class World {
     private experience: Experience;
@@ -17,10 +19,12 @@ export class World {
 
     private camera: Camera;
     private renderer!: THREE.WebGLRenderer;
-    private floor!: Floor;
+    floor!: Floor;
+    house!: House;
     private resources: Resources;
     private character!: Character;
     private environment!: Environment;
+    private controls!: Controls;
 
     constructor() {
         this.experience = Experience.instance;
@@ -32,17 +36,36 @@ export class World {
 
         this.resources.on("ready", () =>{
             this.environment = new Environment();
-            //this.floor = new Floor();
             this.character = new Character();
+            //this.floor = new Floor();
+            this.house = new House();
+            this.controls = new Controls();
+            
         })
     }
+
+    generateFloor(){
+        this.floor.createFloor();
+    }
+
 
 
     resize(){
     }
 
     update(){
-        if(this.character)
+        if (this.character){
             this.character.update();
+        }
+        if (this.floor){
+            this.floor.update();
+        }
+        if (this.controls){
+            this.controls.update();
+        }
+        if(this.house){
+            this.house.update();
+        }
     }
+
 }
