@@ -16,15 +16,18 @@ export class Character {
         this.resources = this.experience.resources;
         this.character = this.resources.items["character"];
         this.focusCharacter = this.character.scene;
+
         this.setModel();
+
     }
 
     setModel(){
+        this.focusCharacter.castShadow = true;
         this.scene.add(this.focusCharacter);
     }
 
-    setAnimation(){
-        this.focusCharacter.rotation.y += 0.01;
+    Rotate(){
+        this.focusCharacter.rotation.x += 0.1;
     }
 
 
@@ -32,6 +35,5 @@ export class Character {
     }
 
     update(){
-       this.setAnimation();
     }
 }
